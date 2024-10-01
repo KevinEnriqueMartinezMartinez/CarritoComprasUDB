@@ -6,12 +6,17 @@ class CarritoDeCompras {
     val items = mutableListOf<Pair<Producto, Int>>()
 
     fun agregarProducto(producto: Producto, cantidad: Int) {
-        if (producto.cantidadDisponible >= cantidad) {
-            items.add(Pair(producto, cantidad))
-            producto.cantidadDisponible -= cantidad  // Reducir la cantidad disponible
-            println("Se ha agregado $cantidad de '${producto.nombre}' al carrito.")
-        } else {
-            println("No hay Sufieciente Productos disponibles. Solo hay ${producto.cantidadDisponible} unidades en el inventario.")
+
+        if(cantidad < 1){
+            println("No puede agregar cantidades negativas!");
+        }else{
+            if (producto.cantidadDisponible >= cantidad) {
+                items.add(Pair(producto, cantidad))
+                producto.cantidadDisponible -= cantidad  // Reducir la cantidad disponible
+                println("Se ha agregado $cantidad de '${producto.nombre}' al carrito.")
+            } else {
+                println("No hay Sufieciente Productos disponibles. Solo hay ${producto.cantidadDisponible} unidades en el inventario.")
+            }
         }
     }
 
