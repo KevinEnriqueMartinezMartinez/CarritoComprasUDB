@@ -3,7 +3,7 @@ package org.example
 fun main() {
     val productosDisponibles = listOf(
         Producto(1, "Laptop", 850.0, 10),
-        Producto(2, "Mouse inalámbrico", 30.0,25),
+        Producto(2, "Mouse inalámbrico", 30.0, 25),
         Producto(3, "Teclado mecánico", 75.0, 15),
         Producto(4, "Monitor 24 pulgadas", 200.0, 8),
         Producto(5, "Disco Duro SSD 500GB", 120.0, 12),
@@ -28,7 +28,6 @@ fun main() {
             1 -> {
                 println("\nProductos disponibles:")
                 productosDisponibles.forEach { producto ->
-                    println("${producto.id}. ${producto.nombre} - $${producto.precio}")
                     println("${producto.id}. ${producto.nombre} - $${producto.precio} (Cantidad disponible: ${producto.cantidadDisponible})")
                 }
             }
@@ -59,14 +58,4 @@ fun main() {
             else -> println("Opción no válida. Intente de nuevo.")
         }
     } while (opcion != 0)
-
-
-
-
-
-
-
-
-
-
 }
