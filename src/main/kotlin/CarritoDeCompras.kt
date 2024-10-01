@@ -29,4 +29,14 @@ class CarritoDeCompras {
             println("El carrito está vacío, no se puede finalizar la compra.")
         }
     }
+
+    fun eliminarProducto(indice: Int) {
+        if (indice in 1..items.size) {
+            val productoEliminado = items.removeAt(indice - 1)
+            println("Se ha eliminado '${productoEliminado.first.nombre}' del carrito.")
+            productoEliminado.first.cantidadDisponible += productoEliminado.second  // Devolver stock al inventario
+        } else {
+            println("Índice inválido. Por favor, seleccione un número correcto.")
+        }
+    }
 }
