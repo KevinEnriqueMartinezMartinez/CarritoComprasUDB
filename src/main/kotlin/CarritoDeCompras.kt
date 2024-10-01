@@ -34,7 +34,6 @@ class CarritoDeCompras {
 
     fun calcularTotal(): Double {
         return items.sumByDouble { (producto, cantidad) -> producto.precio * cantidad }
-        println("hello word")
     }
 
     fun finalizarCompra() {
