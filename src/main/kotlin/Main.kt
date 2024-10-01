@@ -10,15 +10,6 @@ fun main() {
         Producto(6, "Audífonos Bluetooth", 55.0, 20)
     )
 
-
-
-
-
-
-
-
-
-
     val carrito = CarritoDeCompras()
     var opcion: Int
 
