@@ -15,6 +15,23 @@ class CarritoDeCompras {
         }
     }
 
+    fun mostrarCarrito() {
+        if (items.isEmpty()) {
+            println("El carrito está vacío.")
+        } else {
+            println("Productos en el carrito:")
+            items.forEachIndexed { index, (producto, cantidad) ->
+                println("${index + 1}. ${producto.nombre} (x$cantidad) - Precio unitario: $${producto.precio} - Total: $${producto.precio * cantidad}")
+            }
+
+            // Mostrar el total al final
+            val total = calcularTotal()
+            println("************")
+            println("Total del carrito: $$total")
+            println("************")
+        }
+    }
+
     fun calcularTotal(): Double {
         return items.sumByDouble { (producto, cantidad) -> producto.precio * cantidad }
         println("hello word")
@@ -55,4 +72,6 @@ class CarritoDeCompras {
             println("Índice inválido. Por favor, seleccione un número correcto.")
         }
     }
+
+
 }
