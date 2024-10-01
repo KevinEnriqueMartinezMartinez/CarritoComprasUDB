@@ -3,6 +3,22 @@ package org.example
 class CarritoDeCompras {
 
 
+    val items = mutableListOf<Pair<Producto, Int>>()
+
+    fun agregarProducto(producto: Producto, cantidad: Int) {
+        if (producto.cantidadDisponible >= cantidad) {
+            items.add(Pair(producto, cantidad))
+            producto.cantidadDisponible -= cantidad  // Reducir la cantidad disponible
+            println("Se ha agregado $cantidad de '${producto.nombre}' al carrito.")
+        } else {
+            println("No hay Sufieciente Productos disponibles. Solo hay ${producto.cantidadDisponible} unidades en el inventario.")
+        }
+    }
+
+    fun calcularTotal(): Double {
+        return items.sumByDouble { (producto, cantidad) -> producto.precio * cantidad }
+        println("hello word")
+    }
 
     fun finalizarCompra() {
         val total = calcularTotal()
