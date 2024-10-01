@@ -10,6 +10,15 @@ fun main() {
         Producto(6, "Audífonos Bluetooth", 55.0, 20)
     )
 
+
+
+
+
+
+
+
+
+
     val carrito = CarritoDeCompras()
     var opcion: Int
 
@@ -29,6 +38,7 @@ fun main() {
                 println("\nProductos disponibles:")
                 productosDisponibles.forEach { producto ->
                     println("${producto.id}. ${producto.nombre} - $${producto.precio}")
+                    println("${producto.id}. ${producto.nombre} - $${producto.precio} (Cantidad disponible: ${producto.cantidadDisponible})")
                 }
             }
             2 -> {
@@ -58,4 +68,14 @@ fun main() {
             else -> println("Opción no válida. Intente de nuevo.")
         }
     } while (opcion != 0)
+
+
+
+
+
+
+
+
+
+
 }
