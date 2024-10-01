@@ -2,12 +2,12 @@ package org.example
 
 fun main() {
     val productosDisponibles = listOf(
-        Producto(1, "Laptop", 850.0),
-        Producto(2, "Mouse inalámbrico", 30.0),
-        Producto(3, "Teclado mecánico", 75.0),
-        Producto(4, "Monitor 24 pulgadas", 200.0),
-        Producto(5, "Disco Duro SSD 500GB", 120.0),
-        Producto(6, "Audífonos Bluetooth", 55.0)
+        Producto(1, "Laptop", 850.0, 10),
+        Producto(2, "Mouse inalámbrico", 30.0,25),
+        Producto(3, "Teclado mecánico", 75.0, 15),
+        Producto(4, "Monitor 24 pulgadas", 200.0, 8),
+        Producto(5, "Disco Duro SSD 500GB", 120.0, 12),
+        Producto(6, "Audífonos Bluetooth", 55.0, 20)
     )
 
     val carrito = CarritoDeCompras()
